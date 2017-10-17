@@ -156,8 +156,7 @@ footer: #SFOpenVoting
 ---
 # How to help
 
-* Follow [@SFOpenVoting]() and visit sfopenvoting.org
-* Sign up with me for updates
+* Ask Mayor & BoS to support / fund the project
 * Provide tech feedback to OSVTAC: https://osvtac.github.io
 * Spread the word
 * Build interest in your community / pass a resolution?
