@@ -9,6 +9,11 @@ slides using the open-source program called
 which is a desktop application for Mac OS X.
 
 
+## Authors
+
+* Christopher Jerdonek
+
+
 ## Copyright
 
 Copyright (C) 2017 Christopher Jerdonek
