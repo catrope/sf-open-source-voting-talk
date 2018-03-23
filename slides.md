@@ -1,137 +1,199 @@
 <!--
 $theme: default
-footer: #SFOpenVoting
+footer: @catrope | @SFOpenVoting
 -->
 
 ## [#SFOpenVoting]()
 
-# San Francisco's Open Source Voting System Project
+## San Francisco's free software voting system
 
-## 2nd Annual Take Back the Vote! Conference
-
-### October 7, 2017 - Berkeley, CA
-
-### Presenter: Chris Jerdonek
+#### LibrePlanet 2018
+##### Roan Kattouw
 
 ---
 <!-- page_number: true -->
 
-# About Me
-
-## Chris Jerdonek, PhD
-
-* SF Elections Commission, President
-* SF Open Source Voting Technical Advisory Committee, Chair
-* Software developer (10+ years)
-* Open source contributor (mainly Python)
+# Why a free software voting system?
+* What is a voting system?
+* Why is free software (especially) important here?
+* What software exists already?
+* What are we doing in San Francisco?
 
 ---
-# What is a voting system?
+# Why use software for elections?
 
-## (Assume paper-ballot optical scan)
+---
+![](images/big-ballots-are-back.png)
 
-## Hardware
 
+---
+# November 2016 election
+* 3 federal offices (President+VP, Senate, House)
+* 3 state offices (Assembly, Senate, Judge)
+* 4 city/regional offices
+* 17 statewide propositions (51 through 67)
+* 25 city/regional propositions (A through X and RR)
+* 4-page double-sided ballot, 5 pages in some districts
+* 414k votes -> ~1.8M ballot cards
+
+---
+# Ranked choice voting
+![](images/ranked-choice.png)
+* Board of Supervisors (30k-40k voters per district)
+* Mayor (~200k voters)
+* Requires algorithm to compute result
+
+---
+# Reasons to use software
+* Managing large amounts of data
+    * 50+ contests w/ ~400k votes each
+    * Ranked-choice elimination rounds
+* Inputting all that data
+* Reducing voter error
+    * Warn against / prevent invalid votes
+* Accessibility features
+
+---
+# Types of voting systems
+* Hand-counted paper ballots
+* Paper ballots with optical scan
+* Direct recording (levers)
+* Direct recording electronic (DRE)
+    * With or without voter-verified paper audit trail (VVPAT)
+
+---
+# DREs without paper trail are bad
+* Even if the software is free and open! (Which it isn't)
+* No way to audit the results
+* Still used in NJ, DE, SC, GA, LA
+    * VA decertified theirs in 2017
+    * GA-6 and NJ-Gov elections used these
+    * Coalition for Good Governance sued Georgia over DREs (Curling v. Kemp)
+* Banned in many countries, unconstitutional in Germany
+
+---
+# Using software safely
+* Use paper ballots
+* Audit everything
+    * CA: 1% audit
+    * Emerging: Risk-Limiting Audit (RLA)
+* Publish data
+    * SF: detailed ranked-choice data
+    * Future: images of every ballot scanned
+
+---
+# What we use in San Francisco
+* Proprietary system by Dominion (now Sequoia)
+* Hand-marked paper ballots optically scanned at the precinct
+* DREs with paper trail for accessible voting
+* Vote-by-mail ballots scanned at City Hall
+
+---
+<img src="images/scanner.png" width=800>
+
+---
+# Voting system hardware
 * Accessible voting device
 * Precinct ballot scanner
-* Central ballot scanner (for vote-by-mail)
+* Central ballot scanner for vote-by-mail
+
 
 ---
-# What is a voting system?
-
-## Software
-
-* Central storage (e.g. database)
+# Voting system software
 * Ballot layout
-* Ballot adjudication (e.g. write-ins)
+* Ballot scanning and interpretation
+* Ballot adjudication
 * Tabulation
-* Results Reporting
-* Etc.
+    * Non-trivial for ranked-choice elections
+* Results reporting
+* Audit assistance
 
 ---
-# Problems with voting systems today
-
-## 1. Systems are expensive
-
-* $22 million for SF from 2008 to 2018
-  * $10 million up-front + $1 million / year
-* Equipment same as 10 years ago
-* $450 million proposed bond measure in CA
-  * $600-675 million including county funds
+# Problems with proprietary systems
+* Expensive (SF: $10M up front + $1.1M/year)
+* Source code kept secret from public and city govt
+* Making changes is hard / impossible
+* Small market: 3 major vendors
+* Vendor lock-in
+* Security issues
 
 ---
-# Problems with voting systems today
-
-## 2. Systems not transparent
-* Source code secret
-
-## 3. Systems lack features
-* One example: better auditing
-* Can't make even simple changes
-* No ability to experiment / innovate / improve
+# Free software is important here
+* Election software is critical infrastructure
+* Trust in election integrity is important
+* Antiquated voting tech is a problem
+    * Often too expensive to replace
 
 ---
-# Problems with voting systems today
+# Practical advantages of free software
+* Cheaper over time and across jurisdictions
+* Innovation and adaptation easier and cheaper
+* Investment for the common good
+    * Developing jurisdiction spends more, others save
+    * Need state/federal funding
 
-## 4. Not many options
-* 3 major vendors
-* Hard for new entrants to break in
-
-## 5. Vendor lock-in
-* Only one company can service / support
-* Replacing often requires totally new system
 
 ---
-# Solution
-
-## Make voting systems a part of our public infrastructure.
-* Shared public resource rather than commercial product
+# Other free software efforts
 
 ---
-# What is open source software?
-
-## Technical definition: Software with an "OSI‑approved" software license.
-
-## Two examples
-* Firefox browser
-* Linux operating system
-
----
-# What is open source software?
-
-## Non-technical definition: Anyone can—
-
-1. **View** the code for free
-2. **Use** the code for free
-3. Copy and **change** the code for free
-
-## Even better is a "copyleft" license like GPL
-
-* Changed copies must also have the **same** license
-* Means later versions "stay" open source
+# Prime III / One4All
+* Used in New Hampshire since 2016
+* Prime III is GPLv3; One4All is NH's augmented version
+* Accessible voting using COTS hardware
+* Prints ballots; does not count votes
+* QR code scanner to print pre-filled ballot from phone
 
 ---
-# Don't just want open source software
-
-* Hardware should be **easily available & affordable**
-
-  * E.g. Commercial-off-the-shelf (COTS)
-
-* Supporting materials should be **openly licensed**
-
-  * Design documents
-  * User manuals
-  * Test scripts
-  * Etc.
+![](images/one4all.jpg)
 
 ---
-# Where are we in SF?
+# ColoradoRLA
+* Software facilitating risk-limiting audits
+* Built in 2017 by FreeAndFair for Colorado under AGPLv3
+* Statistical method to verify optical scan accuracy
+
+---
+# Risk limiting audits
+* Software interpretation of ballot linked to ballot ID
+* Small # of ballot IDs randomly selected
+* Physical ballots located and compared to interpretation
+* Repeat until probability of winner being wrong is low enough
+
+---
+# Other projects
+* Travis County, TX: STAR-Vote
+    * Design for a full voting system
+    * "with a view toward ultimately" releasing as free software
+    * Abandoned in 2017
+* Los Angeles County, CA: VSAP
+    * Full "voter-centered" redesign
+    * Being developed, parts submitted for certification
+    * Conflicting statements about free licensing
+    * "open source stack/platform", "publicly owned code"
+
+---
+# San Francisco's project
+
+---
+# SF project goals
+* Free software from the start (GPLv3)
+* Commercial, off-the-shelf (COTS) hardware
+* Openly licensed documentation (CC-BY-SA)
+* Cheap and easy to reuse
+* Set a model for state, country
+
+---
+# SF project history
 
 * 2005 - Activists first introduce idea
 * 2008 - BoS creates Voting Systems Task Force (VSTF)
 * 2011 - VSTF recommends open source
-* 2014 - Unanimous BoS Resolution
+* 2014 - Unanimous Board of Supervisors Resolution
 * 2015 - Unanimous Elections Commission Resolution
+* 2016 - Mayor & BoS budget $300K for planning phase
+* 2017 - Commission forms Technical Advisory Committee
+* 2017 - Planning RFP issued; consulting firm Slalom selected
 
 ---
 # (Some) Supporters
@@ -139,40 +201,60 @@ footer: #SFOpenVoting
 ![](images/supporters.png)
 
 ---
-# Where are we in SF? (continued)
-
-* 2016 - Mayor & BoS budget $300K for planning phase
-* 2017 - Commission forms Tech Advisory Committee (OSVTAC)
-* 2017 - Planning RFP issued; consulting firm Slalom selected
+# Press coverage
+<img src="images/sf-examiner.png" height="600">
 
 ---
-# Next Steps in SF
+# Current status
 
-* Commission / OSVTAC meeting each month
-* Report from Slalom due January 2018
-* Budget season starts early 2018
-* (Also need "interim" system)
+* OSVTAC meeting monthly, developing recommendations
+* Procuring interim system (likely proprietary)
+* Budget season is in full swing
+* OSVTAC recommended funding for:
+    * Hiring a project lead
+    * Developing the first iteration
 
 ---
-# How to help
+# Proposed first iteration
+* Focus on vote-by-mail ballots (63% in 2016)
+    * Scanner hardware+software
+    * Software for layout encoding, tabulation, results reporting
+    * (+batch management, auditing)
+* ~6 devices instead of ~600
+* Controlled conditions, highly trained operators
+* Easier to phase in than precinct scanners, accessible devices
 
-* Ask Mayor & BoS to support / fund the project
+---
+# Recent events
+* Slalom report published
+* Commission voted to request $4M from the city
+* CA Clean Money Campaign pushing for state matching funds
+    * 2:1 match, up to $8M
+
+---
+# How you can help
+
+* In SF: ask Mayor & BoS to support funding
+* In CA: ask Assembly & Senate to support matching funds
 * Provide tech feedback to OSVTAC: https://osvtac.github.io
+    * Recommendations on Github, open to PRs
 * Spread the word
-* Build interest in your community / pass a resolution?
+* Build interest in your community / pass a resolution
 
 ---
-## Chris Jerdonek, PhD
+## Roan Kattouw
 
-* chris.jerdonek@sfgov.org (commission)
-* chris.jerdonek@gmail.com (personal)
-* [@cjerdonek]() (personal)
+* roan.kattouw@sfgov.org (committee)
+* roan.kattouw@gmail.com (personal)
+* [@catrope]()
 
-## SF Elections Commission
 
-* http://sfgov.org/electionscommission
-* [@SFElectionsComm]()
-
-## SF Open Source Voting Tech Advisory Committee
+## SF Open Source Voting Technical Advisory Committee
 
 * https://osvtac.github.io
+
+
+<br/>
+<br/>
+CC-BY-SA 4.0<br/>
+Includes material by Chris Jerdonek

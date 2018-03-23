@@ -6,17 +6,19 @@ Francisco's Open Source Voting System project.
 The raw file is in Markdown.  The Markdown file can be converted to PDF
 slides using the open-source program called
 [Marp](https://yhatt.github.io/marp/) (Markdown Presentation Writer),
-which is a desktop application for Mac OS X.
+which is a desktop application for Windows, Mac OS X and Linux.
 
 
 ## Authors
 
 * Christopher Jerdonek
+* Roan Kattouw
 
 
 ## Copyright
 
 Copyright (C) 2017 Christopher Jerdonek
+Copyright (C) 2018 Roan Kattouw
 
 
 ## License
