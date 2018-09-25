@@ -5,15 +5,15 @@ footer: @catrope | @SFOpenVoting
 
 ## [#SFOpenVoting]()
 
-## San Francisco's free software voting system
+## Freeing the software that runs our elections
 
-#### LibrePlanet 2018
+#### Strange Loop 2018
 ##### Roan Kattouw
 
 ---
 <!-- page_number: true -->
 
-# Why a free software voting system?
+# Why an open source voting system?
 * What is a voting system?
 * Why is free software (especially) important here?
 * What software exists already?
@@ -27,26 +27,39 @@ footer: @catrope | @SFOpenVoting
 
 
 ---
-# November 2016 election
+<img src="images/ballot-props.png" height=700>
+
+---
+# Big ballots: November 2016 election
 * 3 federal offices (President+VP, Senate, House)
 * 3 state offices (Assembly, Senate, Judge)
 * 4 city/regional offices
 * 17 statewide propositions (51 through 67)
 * 25 city/regional propositions (A through X and RR)
-* 4-page double-sided ballot, 5 pages in some districts
+
+
+---
+# Big ballots: November 2016 election
+* Up to 52 contests on one ballot
+* 60 contests total
+* 4-page double-sided ballot, 5th page in some districts
 * 414k votes -> ~1.8M ballot cards
+
 
 ---
 # Ranked choice voting
 ![](images/ranked-choice.png)
-* Board of Supervisors (30k-40k voters per district)
-* Mayor (~200k voters)
+* Board of Supervisors (30k-40k votes per district)
+* Mayor (253k votes in June 2018)
 * Requires algorithm to compute result
+
+---
+<img src="images/rcv-mayor.png" width=900>
 
 ---
 # Reasons to use software
 * Managing large amounts of data
-    * 50+ contests w/ ~400k votes each
+    * 400k+ ballots with 50+ items -> ~20M total votes
     * Ranked-choice elimination rounds
 * Inputting all that data
 * Reducing voter error
@@ -64,11 +77,12 @@ footer: @catrope | @SFOpenVoting
 ---
 # DREs without paper trail are bad
 * Even if the software is free and open! (Which it isn't)
-* No way to audit the results
-* Still used in NJ, DE, SC, GA, LA
-    * VA decertified theirs in 2017
-    * GA-6 and NJ-Gov elections used these
-    * Coalition for Good Governance sued Georgia over DREs (Curling v. Kemp)
+* No way to audit the results, no recounts
+* 14 states use this
+    * Statewide in NJ, DE, SC, GA, LA
+    * Some counties in PA, TX, KS, FL, TN, AR, IN, KY, MS
+    * VA decertified DREs in 2017, switched in 2 months
+    * Lawsuit against Georgia demanding paper ballots
 * Banned in many countries, unconstitutional in Germany
 
 ---
@@ -118,14 +132,14 @@ footer: @catrope | @SFOpenVoting
 * Security issues
 
 ---
-# Free software is important here
+# Open source is important here
 * Election software is critical infrastructure
 * Trust in election integrity is important
 * Antiquated voting tech is a problem
     * Often too expensive to replace
 
 ---
-# Practical advantages of free software
+# Practical advantages of open source
 * Cheaper over time and across jurisdictions
 * Innovation and adaptation easier and cheaper
 * Investment for the common good
@@ -151,6 +165,7 @@ footer: @catrope | @SFOpenVoting
 # ColoradoRLA
 * Software facilitating risk-limiting audits
 * Built in 2017 by FreeAndFair for Colorado under AGPLv3
+* Phase 2 in progress
 * Statistical method to verify optical scan accuracy
 
 ---
@@ -164,20 +179,19 @@ footer: @catrope | @SFOpenVoting
 # Other projects
 * Travis County, TX: STAR-Vote
     * Design for a full voting system
-    * "with a view toward ultimately" releasing as free software
+    * "with a view toward ultimately" releasing as open source
     * Abandoned in 2017
 * Los Angeles County, CA: VSAP
-    * Full "voter-centered" redesign
-    * Being developed, parts submitted for certification
-    * Conflicting statements about free licensing
-    * "open source stack/platform", "publicly owned code"
+    * Full "voter-centered" redesign, cost $282M
+    * Will count mail votes in Nov 2018
+    * Advertised as open source, but code is not available
 
 ---
 # San Francisco's project
 
 ---
 # SF project goals
-* Free software from the start (GPLv3)
+* Open source from the start (GPLv3)
 * Commercial, off-the-shelf (COTS) hardware
 * Openly licensed documentation (CC-BY-SA)
 * Cheap and easy to reuse
@@ -193,7 +207,7 @@ footer: @catrope | @SFOpenVoting
 * 2015 - Unanimous Elections Commission Resolution
 * 2016 - Mayor & BoS budget $300K for planning phase
 * 2017 - Commission forms Technical Advisory Committee
-* 2017 - Planning RFP issued; consulting firm Slalom selected
+* 2018 - $1.7M budgeted for development
 
 ---
 # (Some) Supporters
@@ -205,56 +219,55 @@ footer: @catrope | @SFOpenVoting
 <img src="images/sf-examiner.png" height="600">
 
 ---
-# Current status
-
-* OSVTAC meeting monthly, developing recommendations
-* Procuring interim system (likely proprietary)
-* Budget season is in full swing
-* OSVTAC recommended funding for:
-    * Hiring a project lead
-    * Developing the first iteration
+![](images/civil-grand-jury.png)
 
 ---
 # Proposed first iteration
-* Focus on vote-by-mail ballots (63% in 2016)
+* Focus on vote-by-mail ballots (64.6% in June)
     * Scanner hardware+software
     * Software for layout encoding, tabulation, results reporting
     * (+batch management, auditing)
 * ~6 devices instead of ~600
 * Controlled conditions, highly trained operators
 * Easier to phase in than precinct scanners, accessible devices
+* Modular procurement
 
 ---
-# Recent events
-* Slalom report published
-* Commission voted to request $4M from the city
-* CA Clean Money Campaign pushing for state matching funds
-    * 2:1 match, up to $8M
+# Current status
+* OSVTAC meeting monthly, developing recommendations
+* Feasibility study came back w/ deeply flawed report
+* $1.7M in city budget for 2018-2020
+* City hiring a project manager
+* Proposal for state matching funds failed
 
 ---
 # How you can help
-
-* In SF: ask Mayor & BoS to support funding
-* In CA: ask Assembly & Senate to support matching funds
-* Provide tech feedback to OSVTAC: https://osvtac.github.io
-    * Recommendations on Github, open to PRs
-* Spread the word
-* Build interest in your community / pass a resolution
+* Support
+    * Sign up as a supporter, get email newsletter
+    * Follow [@SFOpenVoting](https://twitter.com/sfopenvoting) on Twitter
+* Contribute
+    * Submit PRs to our recommendations: osvtac.github.io
+    * Apply for / advertise project manager job: bit.ly/votingjob
+* Advocate
+	* Build support in your county/state
+	* Contact elected officials, election administrators
 
 ---
-## Roan Kattouw
+## Contact
 
 * roan.kattouw@sfgov.org (committee)
 * roan.kattouw@gmail.com (personal)
-* [@catrope]()
+* [@catrope](https://twitter.com/catrope) on Twitter
 
+<br />
 
-## SF Open Source Voting Technical Advisory Committee
-
+## Links
 * https://osvtac.github.io
+* Apply for the project manager job! bit.ly/votingjob
+* Follow [@SFOpenVoting](https://twitter.com/sfopenvoting) on Twitter
 
 
-<br/>
+
 <br/>
 CC-BY-SA 4.0<br/>
 Includes material by Chris Jerdonek
